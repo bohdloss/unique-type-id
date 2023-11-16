@@ -13,7 +13,7 @@ repository = "https://github.com/vityafx/unique-type-id"
 proc-macro = true
 
 [dependencies]
-syn = "2"
-quote = "1"
+syn = "2.0.39"
+quote = "1.0.33"
 unique-type-id = { path = "../unique-type-id", version = "1" }
-fs2 = "0.4"
+uuid = { version = "1.5.0", features = ["v4"]}

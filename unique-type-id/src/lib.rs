@@ -27,18 +27,14 @@
 //!    assert_eq!(Test2::id().0, 2u64);
 //!}
 //! ```
-extern crate quote;
-extern crate syn;
+extern crate uuid;
 
-/// A strong type for type id.
-#[repr(transparent)]
-#[derive(Debug, Copy, Clone, Eq, PartialEq, Ord, PartialOrd, Hash)]
-pub struct TypeId<T>(pub T);
+use uuid::Uuid;
 
-/// A trait for providing a type id number.
-pub trait UniqueTypeId<T> {
-    const TYPE_ID: TypeId<T>;
+/// A trait for providing an uuid number.
+pub trait StaticUuid {
+    const UUID: Uuid;
 
-    /// Returns the type id number.
-    fn id() -> TypeId<T>;
+    /// Returns the uuid number.
+    fn uuid() -> Uuid;
 }

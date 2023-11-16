@@ -12,5 +12,4 @@ readme = "README.md"
 categories = ["development-tools"]
 
 [dependencies]
-syn = "2"
-quote = "1"
+uuid = { version = "1.5.0", features = ["v4"]}
